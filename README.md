@@ -16,6 +16,8 @@ It uses basic apis to pull lists of items based on a few inputs and then returns
 <h2> Restaurant Chooser App </h2>
 
 The Restaurant Chooser App takes three points of data to return a random location to eat at.  It uses Google's geocoding API, places API, and map embed API.
+
+![This is an image](https://i.imgur.com/63fjeKu.png)
 <h4>Input Fields</h4>
 <ul>
 <li>Location: This is a required input field to begin the search.  It accepts street addresses, cities, and zip codes.</li>
@@ -26,6 +28,7 @@ Due to limitations with the API the search term may not yield perfect results.  
 <br>
 After submitting the required inputs the app will return the name of the restaurant and display an embedded google map with location information.
 
+![This is an image](https://i.imgur.com/4sCq5yE.png)
 <h2> Movie Chooser App </h2>
 <p>TBI</P>
 <h2> TV Show Chooser App </h2>
