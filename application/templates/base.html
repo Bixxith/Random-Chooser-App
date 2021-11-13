@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/main.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="titleBar">Can't decide? Let us choose for you!</div>
+        <div class="navBar">
+            <a href="{{ url_for('restaurants') }}" class="navButton {% if restaurants %}active{% endif %}">Restaurants </a>
+            <a href="#" class="navButton">Movies </a>
+            <a href="#" class="navButton">TV Shows </a>
+            <a href="#" class="navButton">Games </a>
+        </div>
+    </header>
+    <main>
+        <div id="mainContainer">
+            <div class="navArrow">
+                <a href="">&lt;</a>
+            </div>
+            <div id="containerContent">{% block content %} {% endblock %}</div>
+            <div class="navArrow">
+                <a href="">&gt;</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

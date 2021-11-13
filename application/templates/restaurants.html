@@ -1,0 +1,41 @@
+{% extends "base.html" %}{% block content %}
+<div id=restaurantContainer>
+    <div>
+        {% if showMap %}
+        <div>
+            <p id="choice">{{ choice['name'] }}</p>
+        </div>
+        <iframe width="600" height="450" class="emMap" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key={{ apiKey }}
+      &q=place_id:{{ choice['place_id'] }}">
+  </iframe> {% else %}
+        <div>
+            <p id="choice">Random Restaurant Chooser</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <form name="restaurants" action="" method="post" validate>
+        <legend></legend>
+        <fieldset class="form-group">
+            {{ form.hidden_tag() }}
+            <p>
+                <legend style="font-size: 15px;">{{ form.searchLocation.label }}</legend>
+                <br> {{ form.searchLocation }}
+                <br>Required*
+            </p>
+            <p>
+                <legend style="font-size: 15px;">{{ form.searchKeyWord.label }}</legend>
+                <br> {{ form.searchKeyWord }}
+            </p>
+            <p>
+                <legend style="font-size: 15px;">{{ form.searchRadius.label }}</legend>
+                <br> {{ form.searchRadius }}
+                <br>Default: 3 miles<br>
+            </p>
+        </fieldset>
+        <p id=submitButton>
+            {{ form.submit() }}</p>
+    </form>
+
+</div>
+{% endblock %}
